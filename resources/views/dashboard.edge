@@ -1,0 +1,153 @@
+@layout('layouts/app')
+@section('main')
+
+@if(request.request.url === '/dashboard')
+<div class="py-4">
+    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="p-6 bg-white border-b border-gray-200">
+                <a href="/employee/create" class="btn btn-primary">Add new Employee</a>
+            </div>
+        </div>
+    </div>
+</div>
+@endif
+
+<div class="pb-6">
+    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="p-6 bg-white border-b border-gray-200">
+                @if(request.request.url === '/dashboard')
+                <div class="panel-bod">
+                    <table class="table">
+                        <thead>
+                            <th>ID</th>
+                            <th>User_ID</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Gender</th>
+                            <th>Division</th>
+                            <th>Level</th>
+                            <th>Action</th>
+                        </thead>
+
+                        <tbody class="max-w-full">
+                            @each(employee in employees)
+                            <tr class="max-w-full">
+                                <td>
+                                    <p class="sm:font-bold">{{ employee.user_id }}</p>
+                                </td>
+                                <td>
+                                    <p>{{employee.user_id}}</p>
+                                </td>
+                                <td>
+                                    {{employee.first_name}}
+                                </td>
+                                <td>{{employee.last_name}}</td>
+                                <td>{{employee.gender}}</td>
+                                <td>{{employee.division}}</td>
+                                <td>{{employee.level}}</td>
+                                <td>
+                                    <div class="flex flex-row">
+                                        <a href=" /employee/{{employee.id}}"
+                                            class="bg-yellow-500 btn btn-primary mr-4">Edit</a>
+                                        <form method="POST"
+                                            action="{{ route('EmployeesController.destroy', {id : employee.id}) }}?_method=DELETE"
+                                            method="delete">
+                                            <button class="bg-red-500  btn btn-danger">Delete</button>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+                            @endeach
+                        </tbody>
+                    </table>
+                </div>
+                @endif
+
+                @if(request.request.url === '/employee/create')
+                <div>
+                    <form action="{{ route('EmployeesController.store') }}" method="post">
+                        <div class="flex flex-row">
+                            <label>User ID</label>
+                            <input type="text" name="user_id" placeholder="User ID"
+                                value="{{ flashMessages.get('user_id') || '' }}" class="ml-16 border-b-1 px-2" />
+                        </div>
+                        <div class="flex flex-row">
+                            <label>First Name</label>
+                            <input type="text" name="first_name" placeholder="First Name"
+                                value="{{ flashMessages.get('first_name') || ''}}" class="ml-10 border-b-1 px-2" />
+                        </div>
+                        <div class="flex flex-row">
+                            <label>Last Name</label>
+                            <input type="text" name="last_name" placeholder="Last Name"
+                                value="{{ flashMessages.get('last_name') || '' }}" class="ml-10 border-b-1 px-2" />
+                        </div>
+                        <div class="flex flex-row">
+                            <label>Gender</label>
+                            <input type="text" name="gender" placeholder="Gender"
+                                value="{{ flashMessages.get('gender') || '' }}" class="ml-16 border-b-1 px-2" />
+                        </div>
+                        <div class="flex flex-row">
+                            <label>Division</label>
+                            <input type="text" name="division" placeholder="Division"
+                                value="{{ flashMessages.get('division') || '' }}" class="ml-16 border-b-1 px-2" />
+                        </div>
+                        <div class="flex flex-row">
+                            <label>Level</label>
+                            <input type="text" name="level" placeholder="Level"
+                                value="{{ flashMessages.get('level') || '' }}" class="ml-20 border-b-1 px-2" />
+                        </div>
+                        <div>
+                            <button type="submit" class="border-1 my-4 px-10 py-2">Save</button>
+                        </div>
+                    </form>
+                </div>
+                @endif
+
+                @if(request.request.url === `/employee/${request.request.url.slice(-1)}`)
+                <div>
+                    <form action="{{ route('EmployeesController.update', {id : employee.id}) }}?_method=PUT"
+                        method="put">
+                        <div class="flex flex-row">
+                            <label>User ID</label>
+                            <input type="text" name="user_id"
+                                value="{{ request.request.url.replace('/employee/', '') }}"
+                                class="ml-16 border-b-1 px-2" />
+                        </div>
+                        <div class="flex flex-row">
+                            <label>First Name</label>
+                            <input type="text" name="first_name" value="{{ employee.first_name }}"
+                                class="ml-10 border-b-1 px-2" />
+                        </div>
+                        <div class="flex flex-row">
+                            <label>Last Name</label>
+                            <input type="text" name="last_name" value="{{ employee.last_name }}"
+                                class="ml-10 border-b-1 px-2" />
+                        </div>
+                        <div class="flex flex-row">
+                            <label>Gender</label>
+                            <input type="text" name="gender" value="{{ employee.gender }}"
+                                class="ml-16 border-b-1 px-2" />
+                        </div>
+                        <div class="flex flex-row">
+                            <label>Division</label>
+                            <input type="text" name="division" value="{{ employee.division }}"
+                                class="ml-16 border-b-1 px-2" />
+                        </div>
+                        <div class="flex flex-row">
+                            <label>Level</label>
+                            <input type="text" name="level" value="{{ employee.level }}"
+                                class="ml-20 border-b-1 px-2" />
+                        </div>
+                        <div>
+                            <button type="submit" class="border-1 my-4 px-10 py-2">Save</button>
+                        </div>
+                    </form>
+                </div>
+                @endif
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
