@@ -14,7 +14,7 @@ Make sure you have installed all of the following prerequisites on your developm
 
 
 1. Make sure you got the Prerequisites Installed on your local computer.
-2. Download file .zip or clone via github https://github.com/vinsapr/management
+2. Download file .zip or clone via github https://github.com/vinsapr/management-web
 3. Open terminal in your project directory and execute this `yarn` command in the current directory
     ```
     yarn

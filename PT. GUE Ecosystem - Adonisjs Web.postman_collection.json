@@ -1,0 +1,637 @@
+{
+	"info": {
+		"_postman_id": "3871db71-da4d-4e2d-b1d9-f683daa4232a",
+		"name": "PT. GUE Ecosystem - Adonisjs Web",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6359908"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"admin@mail.com\",\n    \"password\": \"admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3333/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3333",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"admin@mail.com\",\n    \"password\": \"admin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3333/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3333",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "set-cookie",
+							"value": "adonis-session=s%3AeyJtZXNzYWdlIjoiY2xpa2UwNTFrMDAwMWJtcWhjcm1yNnN4OCIsInB1cnBvc2UiOiJhZG9uaXMtc2Vzc2lvbiJ9.nq2NeAv4ahXc3nwlS9QgMXXbzlF2P9eSuuuaAgYhv34; Max-Age=7200; Path=/; HttpOnly"
+						},
+						{
+							"key": "set-cookie",
+							"value": "clike051k0001bmqhcrmr6sx8=e%3Ay7va2D1-IpS2GIVsX_gAHrDzMG5MlchOyRX6-69r4vNEOYGU9lUK8SQfVvzy3ZuKzbK9raH2DhzQNIEflU6-6hGm5lYmNMeIDpWRPl8c-XA.bmNoRFlPTEFtZlZTOHNvbA.HWQfauu8cRwultG0Sr07aU4g6ksqr2gdXp4YHY7qGhg; Max-Age=7200; Path=/; HttpOnly"
+						},
+						{
+							"key": "content-length",
+							"value": "16792"
+						},
+						{
+							"key": "content-type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 06 Jun 2023 14:39:32 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n        <meta name=\"csrf-token\" content=\"undefined\">\n        <title>HR - Management</title>\n        <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap\">\n        <link href=\"https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css\" rel=\"stylesheet\">\n        <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\n\n\n    </head>\n    <body class=\"font-sans antialiased\">\n        <div class=\"min-h-screen bg-gray-100\">\n            <header class=\"bg-white shadow mb-4\">\n                <div class=\"max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8\">\n                    <nav class=\"navbar navbar-expand-lg \">\n                        <div class=\"container-fluid\">\n                            <a class=\"navbar-brand\" href=\"/\">HR - Management</a>\n                            <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\"\n                            data-bs-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\"\n                            aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n                                <span class=\"navbar-toggler-icon\"></span>\n                            </button>\n                            <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n                                <ul class=\"navbar-nav me-auto mb-2 mb-lg-0\">\n                                    <li class=\"nav-item\">\n                                        <a class=\"nav-link active\" aria-current=\"page\" href=\"/dashboard\">Home</a>\n                                    </li>\n                                </ul>\n                            </div>\n                        </div>\n                    </nav>\n                </div>\n            </header>\n            <div class=\"max-w-7xl mx-auto sm:px-6 \">\n                <h2 class=\"font-semibold text-xl text-gray-800 leading-tight\">\n                Employee\n            </h2>\n            </div>\n            <main>\n                <div class=\"py-4\">\n                    <div class=\"max-w-7xl mx-auto sm:px-6 lg:px-8\">\n                        <div class=\"bg-white overflow-hidden shadow-sm sm:rounded-lg\">\n                            <div class=\"p-6 bg-white border-b border-gray-200\">\n                                <a href=\"/employee/create\" class=\"btn btn-primary\">Add new Employee</a>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"pb-6\">\n                    <div class=\"max-w-7xl mx-auto sm:px-6 lg:px-8\">\n                        <div class=\"bg-white overflow-hidden shadow-sm sm:rounded-lg\">\n                            <div class=\"p-6 bg-white border-b border-gray-200\">\n                                <div class=\"panel-bod\">\n                                    <table class=\"table\">\n                                        <thead>\n                                            <th>ID</th>\n                                            <th>User_ID</th>\n                                            <th>First Name</th>\n                                            <th>Last Name</th>\n                                            <th>Gender</th>\n                                            <th>Division</th>\n                                            <th>Level</th>\n                                            <th>Action</th>\n                                        </thead>\n                                        <tbody class=\"max-w-full\">\n                                            <tr class=\"max-w-full\">\n                                                <td>\n                                                    <p class=\"sm:font-bold\">1</p>\n                                                </td>\n                                                <td>\n                                                    <p>1</p>\n                                                </td>\n                                                <td>\n                                    Jhon\n                                </td>\n                                                <td>Doe</td>\n                                                <td>Male</td>\n                                                <td>Tech</td>\n                                                <td>Staff</td>\n                                                <td>\n                                                    <div class=\"flex flex-row\">\n                                                        <a href=\" /employee/1\"\n                                            class=\"bg-yellow-500 btn btn-primary mr-4\">Edit</a>\n                                                        <form method=\"POST\"\n                                            action=\"/employee/1?_method=DELETE\"\n                                            method=\"delete\">\n                                                            <button class=\"bg-red-500  btn btn-danger\">Delete</button>\n                                                        </form>\n                                                    </div>\n                                                </td>\n                                            </tr>\n                                            <tr class=\"max-w-full\">\n                                                <td>\n                                                    <p class=\"sm:font-bold\">2</p>\n                                                </td>\n                                                <td>\n                                                    <p>2</p>\n                                                </td>\n                                                <td>\n                                    Isach\n                                </td>\n                                                <td>Newton</td>\n                                                <td>Male</td>\n                                                <td>Finance</td>\n                                                <td>Staff</td>\n                                                <td>\n                                                    <div class=\"flex flex-row\">\n                                                        <a href=\" /employee/2\"\n                                            class=\"bg-yellow-500 btn btn-primary mr-4\">Edit</a>\n                                                        <form method=\"POST\"\n                                            action=\"/employee/2?_method=DELETE\"\n                                            method=\"delete\">\n                                                            <button class=\"bg-red-500  btn btn-danger\">Delete</button>\n                                                        </form>\n                                                    </div>\n                                                </td>\n                                            </tr>\n                                            <tr class=\"max-w-full\">\n                                                <td>\n                                                    <p class=\"sm:font-bold\">3</p>\n                                                </td>\n                                                <td>\n                                                    <p>3</p>\n                                                </td>\n                                                <td>\n                                    Agus\n                                </td>\n                                                <td>Doang</td>\n                                                <td>Male</td>\n                                                <td>Tech</td>\n                                                <td>Lead</td>\n                                                <td>\n                                                    <div class=\"flex flex-row\">\n                                                        <a href=\" /employee/3\"\n                                            class=\"bg-yellow-500 btn btn-primary mr-4\">Edit</a>\n                                                        <form method=\"POST\"\n                                            action=\"/employee/3?_method=DELETE\"\n                                            method=\"delete\">\n                                                            <button class=\"bg-red-500  btn btn-danger\">Delete</button>\n                                                        </form>\n                                                    </div>\n                                                </td>\n                                            </tr>\n                                            <tr class=\"max-w-full\">\n                                                <td>\n                                                    <p class=\"sm:font-bold\">4</p>\n                                                </td>\n                                                <td>\n                                                    <p>4</p>\n                                                </td>\n                                                <td>\n                                    Bambang\n                                </td>\n                                                <td>Pamungkas</td>\n                                                <td>Male</td>\n                                                <td>Marketing</td>\n                                                <td>Manager</td>\n                                                <td>\n                                                    <div class=\"flex flex-row\">\n                                                        <a href=\" /employee/4\"\n                                            class=\"bg-yellow-500 btn btn-primary mr-4\">Edit</a>\n                                                        <form method=\"POST\"\n                                            action=\"/employee/4?_method=DELETE\"\n                                            method=\"delete\">\n                                                            <button class=\"bg-red-500  btn btn-danger\">Delete</button>\n                                                        </form>\n                                                    </div>\n                                                </td>\n                                            </tr>\n                                            <tr class=\"max-w-full\">\n                                                <td>\n                                                    <p class=\"sm:font-bold\">5</p>\n                                                </td>\n                                                <td>\n                                                    <p>5</p>\n                                                </td>\n                                                <td>\n                                    Tejo\n                                </td>\n                                                <td>Sutejo</td>\n                                                <td>Male</td>\n                                                <td>HR</td>\n                                                <td>Staff</td>\n                                                <td>\n                                                    <div class=\"flex flex-row\">\n                                                        <a href=\" /employee/5\"\n                                            class=\"bg-yellow-500 btn btn-primary mr-4\">Edit</a>\n                                                        <form method=\"POST\"\n                                            action=\"/employee/5?_method=DELETE\"\n                                            method=\"delete\">\n                                                            <button class=\"bg-red-500  btn btn-danger\">Delete</button>\n                                                        </form>\n                                                    </div>\n                                                </td>\n                                            </tr>\n                                            <tr class=\"max-w-full\">\n                                                <td>\n                                                    <p class=\"sm:font-bold\">6</p>\n                                                </td>\n                                                <td>\n                                                    <p>6</p>\n                                                </td>\n                                                <td>\n                                    Sukardi\n                                </td>\n                                                <td>Jaya</td>\n                                                <td>Male</td>\n                                                <td>Operation</td>\n                                                <td>Lead</td>\n                                                <td>\n                                                    <div class=\"flex flex-row\">\n                                                        <a href=\" /employee/6\"\n                                            class=\"bg-yellow-500 btn btn-primary mr-4\">Edit</a>\n                                                        <form method=\"POST\"\n                                            action=\"/employee/6?_method=DELETE\"\n                                            method=\"delete\">\n                                                            <button class=\"bg-red-500  btn btn-danger\">Delete</button>\n                                                        </form>\n                                                    </div>\n                                                </td>\n                                            </tr>\n                                            <tr class=\"max-w-full\">\n                                                <td>\n                                                    <p class=\"sm:font-bold\">7</p>\n                                                </td>\n                                                <td>\n                                                    <p>7</p>\n                                                </td>\n                                                <td>\n                                    Samsul\n                                </td>\n                                                <td>Merdeka</td>\n                                                <td>Male</td>\n                                                <td>Sales</td>\n                                                <td>Lead</td>\n                                                <td>\n                                                    <div class=\"flex flex-row\">\n                                                        <a href=\" /employee/7\"\n                                            class=\"bg-yellow-500 btn btn-primary mr-4\">Edit</a>\n                                                        <form method=\"POST\"\n                                            action=\"/employee/7?_method=DELETE\"\n                                            method=\"delete\">\n                                                            <button class=\"bg-red-500  btn btn-danger\">Delete</button>\n                                                        </form>\n                                                    </div>\n                                                </td>\n                                            </tr>\n                                            <tr class=\"max-w-full\">\n                                                <td>\n                                                    <p class=\"sm:font-bold\">8</p>\n                                                </td>\n                                                <td>\n                                                    <p>8</p>\n                                                </td>\n                                                <td>\n                                    Bahri\n                                </td>\n                                                <td>Bersama</td>\n                                                <td>Male</td>\n                                                <td>Finance</td>\n                                                <td>Manager</td>\n                                                <td>\n                                                    <div class=\"flex flex-row\">\n                                                        <a href=\" /employee/8\"\n                                            class=\"bg-yellow-500 btn btn-primary mr-4\">Edit</a>\n                                                        <form method=\"POST\"\n                                            action=\"/employee/8?_method=DELETE\"\n                                            method=\"delete\">\n                                                            <button class=\"bg-red-500  btn btn-danger\">Delete</button>\n                                                        </form>\n                                                    </div>\n                                                </td>\n                                            </tr>\n                                            <tr class=\"max-w-full\">\n                                                <td>\n                                                    <p class=\"sm:font-bold\">9</p>\n                                                </td>\n                                                <td>\n                                                    <p>9</p>\n                                                </td>\n                                                <td>\n                                    Onta\n                                </td>\n                                                <td>Arab</td>\n                                                <td>Female</td>\n                                                <td>Tech</td>\n                                                <td>Staff</td>\n                                                <td>\n                                                    <div class=\"flex flex-row\">\n                                                        <a href=\" /employee/9\"\n                                            class=\"bg-yellow-500 btn btn-primary mr-4\">Edit</a>\n                                                        <form method=\"POST\"\n                                            action=\"/employee/9?_method=DELETE\"\n                                            method=\"delete\">\n                                                            <button class=\"bg-red-500  btn btn-danger\">Delete</button>\n                                                        </form>\n                                                    </div>\n                                                </td>\n                                            </tr>\n                                            <tr class=\"max-w-full\">\n                                                <td>\n                                                    <p class=\"sm:font-bold\">10</p>\n                                                </td>\n                                                <td>\n                                                    <p>10</p>\n                                                </td>\n                                                <td>\n                                    Test\n                                </td>\n                                                <td>Doang</td>\n                                                <td>Male</td>\n                                                <td>Finance</td>\n                                                <td>Staff</td>\n                                                <td>\n                                                    <div class=\"flex flex-row\">\n                                                        <a href=\" /employee/10\"\n                                            class=\"bg-yellow-500 btn btn-primary mr-4\">Edit</a>\n                                                        <form method=\"POST\"\n                                            action=\"/employee/10?_method=DELETE\"\n                                            method=\"delete\">\n                                                            <button class=\"bg-red-500  btn btn-danger\">Delete</button>\n                                                        </form>\n                                                    </div>\n                                                </td>\n                                            </tr>\n                                        </tbody>\n                                    </table>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </main>\n        </div>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"test@mail.com\",\n    \"password\": \"test123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3333/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3333",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"test@mail.com\",\n    \"password\": \"test123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3333/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3333",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "set-cookie",
+							"value": "adonis-session=s%3AeyJtZXNzYWdlIjoiY2xpa2UwNTFrMDAwMWJtcWhjcm1yNnN4OCIsInB1cnBvc2UiOiJhZG9uaXMtc2Vzc2lvbiJ9.nq2NeAv4ahXc3nwlS9QgMXXbzlF2P9eSuuuaAgYhv34; Max-Age=7200; Path=/; HttpOnly"
+						},
+						{
+							"key": "set-cookie",
+							"value": "clike051k0001bmqhcrmr6sx8=e%3AHWxqR1C7sPt0KqhBv8VCHM3I1tv3BlpEvoSXRV0u30fHk-n9-ogAft1IUV8kSCU4vLn5j3AusItBm9tYSpkhh1vxs4-qXPIrlK1hEZutBFs.S1dQTzc0SU9saXZfdTdpaw.zQW1Gfkm58TTCGtrKPCn9Rh8qthPHnnWrE2a5Aqn4E8; Max-Age=7200; Path=/; HttpOnly"
+						},
+						{
+							"key": "content-length",
+							"value": "1634"
+						},
+						{
+							"key": "content-type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 06 Jun 2023 14:40:12 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <title>Vivin Technical Test GUE - Fullstack</title>\n        <link href=\"https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap\" rel=\"stylesheet\">\n        <style>\n    html,\n    body {\n      background-color: #F7F8FA;\n      font-family: 'Poppins', sans-serif;\n      height: 100vh;\n      color: #46444c;\n      position: relative;\n    }\n\n    body:before {\n      content: '';\n      background: #04AA6D;\n      top: 0;\n      left: 0;\n      right: 0;\n      height: 6px;\n      position: absolute;\n    }\n\n    * {\n      margin: 0;\n      padding: 0;\n    }\n\n    a {\n      color: #04AA6D;\n      text-decoration: none;\n    }\n\n    main {\n      max-width: 620px;\n      margin: auto;\n      height: 100vh;\n      padding: 0 30px;\n      align-items: center;\n      display: flex;\n      justify-content: center;\n    }\n\n    .title {\n      font-size: 50px;\n      line-height: 50px;\n      margin-bottom: 10px;\n      color: #17161A;\n    }\n\n    .subtitle {\n      font-size: 26px;\n      margin-bottom: 40px;\n    }\n\n    .btn {\n      background-color: #04AA6D;\n      color: white;\n      padding: 14px 20px;\n      margin: 8px 0;\n      border: none;\n      cursor: pointer;\n      width: 100%;\n      border-radius: 8px;\n    }\n  </style>\n    </head>\n    <body>\n        <main>\n            <div>\n                <h1 class=\"title\"> HR - Management </h1>\n                <p class=\"subtitle\">\n        Selamat Bekerja ^_^ !!\n      </p>\n                <a href=\"http://127.0.0.1:3333/login\">\n                    <button class=\"btn\">Login</button>\n                </a>\n            </div>\n        </main>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "Dashboard",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3333/dashboard",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3333",
+					"path": [
+						"dashboard"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Dashboard",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3333/dashboard",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3333",
+							"path": [
+								"dashboard"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "set-cookie",
+							"value": "adonis-session=s%3AeyJtZXNzYWdlIjoiY2xpbGZndXdrMDAwMWIzcWg1ZHYwZ3c1ZSIsInB1cnBvc2UiOiJhZG9uaXMtc2Vzc2lvbiJ9.0whctkNb-fQP1RQvtROLL_rzKwTTsvuY7v8fN0Z8UaQ; Max-Age=7200; Path=/; HttpOnly"
+						},
+						{
+							"key": "set-cookie",
+							"value": "clilfguwk0001b3qh5dv0gw5e=e%3AjUWqxD8yuoNZKH2D_VPEcBqzD096IyYp_4qu-aTkL8_pPQaBMsRpTnYWF0IYYlJVNMPm3bnbqK2bEoDiM49iz2Q_0R7W7SXDNj9N_fF8Ml4.dWV6U0NZM3FFMDJoVW1aTQ.uX1fqC1zxFA4cBtJVgYKYxCOK4Wbu0dczQPJWusQ-mQ; Max-Age=7200; Path=/; HttpOnly"
+						},
+						{
+							"key": "content-length",
+							"value": "19480"
+						},
+						{
+							"key": "content-type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 07 Jun 2023 08:08:33 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n        <meta name=\"csrf-token\" content=\"undefined\">\n        <title>HR - Management</title>\n        <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap\">\n        <link href=\"https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css\" rel=\"stylesheet\">\n        <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\n\n\n    </head>\n    <body class=\"font-sans antialiased\">\n        <div class=\"min-h-screen bg-gray-100\">\n            <header class=\"bg-white shadow mb-4\">\n                <div class=\"max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8\">\n                    <nav class=\"navbar navbar-expand-lg \">\n                        <div class=\"container-fluid\">\n                            <a class=\"navbar-brand\" href=\"/\">HR - Management</a>\n                            <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\"\n                            data-bs-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\"\n                            aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n                                <span class=\"navbar-toggler-icon\"></span>\n                            </button>\n                            <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n                                <ul class=\"navbar-nav me-auto mb-2 mb-lg-0\">\n                                    <li class=\"nav-item\">\n                                        <a class=\"nav-link active\" aria-current=\"page\" href=\"/dashboard\">Home</a>\n                                    </li>\n                                </ul>\n                            </div>\n                        </div>\n                    </nav>\n                </div>\n            </header>\n            <div class=\"max-w-7xl mx-auto sm:px-6 \">\n                <h2 class=\"font-semibold text-xl text-gray-800 leading-tight\">\n                Employee\n            </h2>\n            </div>\n            <main>\n                <div class=\"py-4\">\n                    <div class=\"max-w-7xl mx-auto sm:px-6 lg:px-8\">\n                        <div class=\"bg-white overflow-hidden shadow-sm sm:rounded-lg\">\n                            <div class=\"p-6 bg-white border-b border-gray-200\">\n                                <a href=\"/employee/create\" class=\"btn btn-primary\">Add new Employee</a>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"pb-6\">\n                    <div class=\"max-w-7xl mx-auto sm:px-6 lg:px-8\">\n                        <div class=\"bg-white overflow-hidden shadow-sm sm:rounded-lg\">\n                            <div class=\"p-6 bg-white border-b border-gray-200\">\n                                <div class=\"panel-bod\">\n                                    <table class=\"table\">\n                                        <thead>\n                                            <th>ID</th>\n                                            <th>User_ID</th>\n                                            <th>First Name</th>\n                                            <th>Last Name</th>\n                                            <th>Gender</th>\n                                            <th>Division</th>\n                                            <th>Level</th>\n                                            <th>Action</th>\n                                        </thead>\n                                        <tbody class=\"max-w-full\">\n                                            <tr class=\"max-w-full\">\n                                                <td>\n                                                    <p class=\"sm:font-bold\">1</p>\n                                                </td>\n                                                <td>\n                                                    <p>1</p>\n                                                </td>\n                                                <td>\n                                    Jhon\n                                </td>\n                                                <td>Doe</td>\n                                                <td>Male</td>\n                                                <td>Tech</td>\n                                                <td>Staff</td>\n                                                <td>\n                                                    <div class=\"flex flex-row\">\n                                                        <a href=\" /employee/1\"\n                                            class=\"bg-yellow-500 btn btn-primary mr-4\">Edit</a>\n                                                        <form method=\"POST\"\n                                            action=\"/employee/1?_method=DELETE\"\n                                            method=\"delete\">\n                                                            <button class=\"bg-red-500  btn btn-danger\">Delete</button>\n                                                        </form>\n                                                    </div>\n                                                </td>\n                                            </tr>\n                                            <tr class=\"max-w-full\">\n                                                <td>\n                                                    <p class=\"sm:font-bold\">2</p>\n                                                </td>\n                                                <td>\n                                                    <p>2</p>\n                                                </td>\n                                                <td>\n                                    Isach\n                                </td>\n                                                <td>Newton</td>\n                                                <td>Male</td>\n                                                <td>Finance</td>\n                                                <td>Staff</td>\n                                                <td>\n                                                    <div class=\"flex flex-row\">\n                                                        <a href=\" /employee/2\"\n                                            class=\"bg-yellow-500 btn btn-primary mr-4\">Edit</a>\n                                                        <form method=\"POST\"\n                                            action=\"/employee/2?_method=DELETE\"\n                                            method=\"delete\">\n                                                            <button class=\"bg-red-500  btn btn-danger\">Delete</button>\n                                                        </form>\n                                                    </div>\n                                                </td>\n                                            </tr>\n                                            <tr class=\"max-w-full\">\n                                                <td>\n                                                    <p class=\"sm:font-bold\">3</p>\n                                                </td>\n                                                <td>\n                                                    <p>3</p>\n                                                </td>\n                                                <td>\n                                    Agus\n                                </td>\n                                                <td>Doang</td>\n                                                <td>Male</td>\n                                                <td>Tech</td>\n                                                <td>Lead</td>\n                                                <td>\n                                                    <div class=\"flex flex-row\">\n                                                        <a href=\" /employee/3\"\n                                            class=\"bg-yellow-500 btn btn-primary mr-4\">Edit</a>\n                                                        <form method=\"POST\"\n                                            action=\"/employee/3?_method=DELETE\"\n                                            method=\"delete\">\n                                                            <button class=\"bg-red-500  btn btn-danger\">Delete</button>\n                                                        </form>\n                                                    </div>\n                                                </td>\n                                            </tr>\n                                            <tr class=\"max-w-full\">\n                                                <td>\n                                                    <p class=\"sm:font-bold\">4</p>\n                                                </td>\n                                                <td>\n                                                    <p>4</p>\n                                                </td>\n                                                <td>\n                                    Bambang\n                                </td>\n                                                <td>Pamungkas</td>\n                                                <td>Male</td>\n                                                <td>Marketing</td>\n                                                <td>Manager</td>\n                                                <td>\n                                                    <div class=\"flex flex-row\">\n                                                        <a href=\" /employee/4\"\n                                            class=\"bg-yellow-500 btn btn-primary mr-4\">Edit</a>\n                                                        <form method=\"POST\"\n                                            action=\"/employee/4?_method=DELETE\"\n                                            method=\"delete\">\n                                                            <button class=\"bg-red-500  btn btn-danger\">Delete</button>\n                                                        </form>\n                                                    </div>\n                                                </td>\n                                            </tr>\n                                            <tr class=\"max-w-full\">\n                                                <td>\n                                                    <p class=\"sm:font-bold\">5</p>\n                                                </td>\n                                                <td>\n                                                    <p>5</p>\n                                                </td>\n                                                <td>\n                                    Tejo\n                                </td>\n                                                <td>Sutejo</td>\n                                                <td>Male</td>\n                                                <td>HR</td>\n                                                <td>Staff</td>\n                                                <td>\n                                                    <div class=\"flex flex-row\">\n                                                        <a href=\" /employee/5\"\n                                            class=\"bg-yellow-500 btn btn-primary mr-4\">Edit</a>\n                                                        <form method=\"POST\"\n                                            action=\"/employee/5?_method=DELETE\"\n                                            method=\"delete\">\n                                                            <button class=\"bg-red-500  btn btn-danger\">Delete</button>\n                                                        </form>\n                                                    </div>\n                                                </td>\n                                            </tr>\n                                            <tr class=\"max-w-full\">\n                                                <td>\n                                                    <p class=\"sm:font-bold\">6</p>\n                                                </td>\n                                                <td>\n                                                    <p>6</p>\n                                                </td>\n                                                <td>\n                                    Sukardi\n                                </td>\n                                                <td>Jaya</td>\n                                                <td>Male</td>\n                                                <td>Operation</td>\n                                                <td>Lead</td>\n                                                <td>\n                                                    <div class=\"flex flex-row\">\n                                                        <a href=\" /employee/6\"\n                                            class=\"bg-yellow-500 btn btn-primary mr-4\">Edit</a>\n                                                        <form method=\"POST\"\n                                            action=\"/employee/6?_method=DELETE\"\n                                            method=\"delete\">\n                                                            <button class=\"bg-red-500  btn btn-danger\">Delete</button>\n                                                        </form>\n                                                    </div>\n                                                </td>\n                                            </tr>\n                                            <tr class=\"max-w-full\">\n                                                <td>\n                                                    <p class=\"sm:font-bold\">7</p>\n                                                </td>\n                                                <td>\n                                                    <p>7</p>\n                                                </td>\n                                                <td>\n                                    Samsul\n                                </td>\n                                                <td>Merdeka</td>\n                                                <td>Male</td>\n                                                <td>Sales</td>\n                                                <td>Lead</td>\n                                                <td>\n                                                    <div class=\"flex flex-row\">\n                                                        <a href=\" /employee/7\"\n                                            class=\"bg-yellow-500 btn btn-primary mr-4\">Edit</a>\n                                                        <form method=\"POST\"\n                                            action=\"/employee/7?_method=DELETE\"\n                                            method=\"delete\">\n                                                            <button class=\"bg-red-500  btn btn-danger\">Delete</button>\n                                                        </form>\n                                                    </div>\n                                                </td>\n                                            </tr>\n                                            <tr class=\"max-w-full\">\n                                                <td>\n                                                    <p class=\"sm:font-bold\">8</p>\n                                                </td>\n                                                <td>\n                                                    <p>8</p>\n                                                </td>\n                                                <td>\n                                    Bahri\n                                </td>\n                                                <td>Bersama</td>\n                                                <td>Male</td>\n                                                <td>Finance</td>\n                                                <td>Manager</td>\n                                                <td>\n                                                    <div class=\"flex flex-row\">\n                                                        <a href=\" /employee/8\"\n                                            class=\"bg-yellow-500 btn btn-primary mr-4\">Edit</a>\n                                                        <form method=\"POST\"\n                                            action=\"/employee/8?_method=DELETE\"\n                                            method=\"delete\">\n                                                            <button class=\"bg-red-500  btn btn-danger\">Delete</button>\n                                                        </form>\n                                                    </div>\n                                                </td>\n                                            </tr>\n                                            <tr class=\"max-w-full\">\n                                                <td>\n                                                    <p class=\"sm:font-bold\">9</p>\n                                                </td>\n                                                <td>\n                                                    <p>9</p>\n                                                </td>\n                                                <td>\n                                    Onta\n                                </td>\n                                                <td>Arab</td>\n                                                <td>Female</td>\n                                                <td>Tech</td>\n                                                <td>Staff</td>\n                                                <td>\n                                                    <div class=\"flex flex-row\">\n                                                        <a href=\" /employee/9\"\n                                            class=\"bg-yellow-500 btn btn-primary mr-4\">Edit</a>\n                                                        <form method=\"POST\"\n                                            action=\"/employee/9?_method=DELETE\"\n                                            method=\"delete\">\n                                                            <button class=\"bg-red-500  btn btn-danger\">Delete</button>\n                                                        </form>\n                                                    </div>\n                                                </td>\n                                            </tr>\n                                            <tr class=\"max-w-full\">\n                                                <td>\n                                                    <p class=\"sm:font-bold\">10</p>\n                                                </td>\n                                                <td>\n                                                    <p>10</p>\n                                                </td>\n                                                <td>\n                                    Test\n                                </td>\n                                                <td>Doang</td>\n                                                <td>Male</td>\n                                                <td>Finance</td>\n                                                <td>Staff</td>\n                                                <td>\n                                                    <div class=\"flex flex-row\">\n                                                        <a href=\" /employee/10\"\n                                            class=\"bg-yellow-500 btn btn-primary mr-4\">Edit</a>\n                                                        <form method=\"POST\"\n                                            action=\"/employee/10?_method=DELETE\"\n                                            method=\"delete\">\n                                                            <button class=\"bg-red-500  btn btn-danger\">Delete</button>\n                                                        </form>\n                                                    </div>\n                                                </td>\n                                            </tr>\n                                            <tr class=\"max-w-full\">\n                                                <td>\n                                                    <p class=\"sm:font-bold\">1</p>\n                                                </td>\n                                                <td>\n                                                    <p>1</p>\n                                                </td>\n                                                <td>\n                                    Jhon\n                                </td>\n                                                <td>Doe</td>\n                                                <td>Male</td>\n                                                <td>Tech</td>\n                                                <td>Manager</td>\n                                                <td>\n                                                    <div class=\"flex flex-row\">\n                                                        <a href=\" /employee/11\"\n                                            class=\"bg-yellow-500 btn btn-primary mr-4\">Edit</a>\n                                                        <form method=\"POST\"\n                                            action=\"/employee/11?_method=DELETE\"\n                                            method=\"delete\">\n                                                            <button class=\"bg-red-500  btn btn-danger\">Delete</button>\n                                                        </form>\n                                                    </div>\n                                                </td>\n                                            </tr>\n                                            <tr class=\"max-w-full\">\n                                                <td>\n                                                    <p class=\"sm:font-bold\">1</p>\n                                                </td>\n                                                <td>\n                                                    <p>1</p>\n                                                </td>\n                                                <td>\n                                    Jhon\n                                </td>\n                                                <td>Doe</td>\n                                                <td>Male</td>\n                                                <td>Tech</td>\n                                                <td>Manager</td>\n                                                <td>\n                                                    <div class=\"flex flex-row\">\n                                                        <a href=\" /employee/12\"\n                                            class=\"bg-yellow-500 btn btn-primary mr-4\">Edit</a>\n                                                        <form method=\"POST\"\n                                            action=\"/employee/12?_method=DELETE\"\n                                            method=\"delete\">\n                                                            <button class=\"bg-red-500  btn btn-danger\">Delete</button>\n                                                        </form>\n                                                    </div>\n                                                </td>\n                                            </tr>\n                                        </tbody>\n                                    </table>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </main>\n        </div>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "Create new Employee",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer Mg.0zMCwjzjBfue4bUornjE7FbAJY0owrPdxCTYZbiKZtNtFluEqAFVDCByc0pD",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": 1,\n    \"first_name\": \"Jhon\",\n    \"last_name\": \"Doe\",\n    \"gender\": \"Male\",\n    \"division\": \"Tech\",\n    \"level\": \"Manager\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3333/employee",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3333",
+					"path": [
+						"employee"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create new Employee",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer Mg.0zMCwjzjBfue4bUornjE7FbAJY0owrPdxCTYZbiKZtNtFluEqAFVDCByc0pD",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\": 1,\n    \"first_name\": \"Jhon\",\n    \"last_name\": \"Doe\",\n    \"gender\": \"Male\",\n    \"division\": \"Tech\",\n    \"level\": \"Manager\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3333/employee",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3333",
+							"path": [
+								"employee"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "set-cookie",
+							"value": "adonis-session=s%3AeyJtZXNzYWdlIjoiY2xpbGZndXdrMDAwMWIzcWg1ZHYwZ3c1ZSIsInB1cnBvc2UiOiJhZG9uaXMtc2Vzc2lvbiJ9.0whctkNb-fQP1RQvtROLL_rzKwTTsvuY7v8fN0Z8UaQ; Max-Age=7200; Path=/; HttpOnly"
+						},
+						{
+							"key": "set-cookie",
+							"value": "clilfguwk0001b3qh5dv0gw5e=e%3AK52k6FKkZDWJjphEeTzwFw0RnpuK0D7oigpObU1DNM6s7SSeG8aihQsPulWDpGLVRRWEFRgOXS0Umy18ISnGbncN25BPk3zZUXSqDl34dBI.RjJ0WVVXamRzQ2FxZ2NWUg.NPakfXet502fu1aCvsZOb_2xZxM5w_KES_LNFmQ6xyo; Max-Age=7200; Path=/; HttpOnly"
+						},
+						{
+							"key": "content-length",
+							"value": "2344"
+						},
+						{
+							"key": "content-type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 07 Jun 2023 08:08:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n        <meta name=\"csrf-token\" content=\"undefined\">\n        <title>HR - Management</title>\n        <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap\">\n        <link href=\"https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css\" rel=\"stylesheet\">\n        <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\n\n\n    </head>\n    <body class=\"font-sans antialiased\">\n        <div class=\"min-h-screen bg-gray-100\">\n            <header class=\"bg-white shadow mb-4\">\n                <div class=\"max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8\">\n                    <nav class=\"navbar navbar-expand-lg \">\n                        <div class=\"container-fluid\">\n                            <a class=\"navbar-brand\" href=\"/\">HR - Management</a>\n                            <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\"\n                            data-bs-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\"\n                            aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n                                <span class=\"navbar-toggler-icon\"></span>\n                            </button>\n                            <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n                                <ul class=\"navbar-nav me-auto mb-2 mb-lg-0\">\n                                    <li class=\"nav-item\">\n                                        <a class=\"nav-link active\" aria-current=\"page\" href=\"/dashboard\">Home</a>\n                                    </li>\n                                </ul>\n                            </div>\n                        </div>\n                    </nav>\n                </div>\n            </header>\n            <div class=\"max-w-7xl mx-auto sm:px-6 \">\n                <h2 class=\"font-semibold text-xl text-gray-800 leading-tight\">\n                Employee\n            </h2>\n            </div>\n            <main>\n                <div class=\"pb-6\">\n                    <div class=\"max-w-7xl mx-auto sm:px-6 lg:px-8\">\n                        <div class=\"bg-white overflow-hidden shadow-sm sm:rounded-lg\">\n                            <div class=\"p-6 bg-white border-b border-gray-200\">\n\n\n            </div>\n                        </div>\n                    </div>\n                </div>\n            </main>\n        </div>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "Employee By ID Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer Mg.0zMCwjzjBfue4bUornjE7FbAJY0owrPdxCTYZbiKZtNtFluEqAFVDCByc0pD",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3333/employee/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3333",
+					"path": [
+						"employee",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Employee By ID Copy",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer Mg.0zMCwjzjBfue4bUornjE7FbAJY0owrPdxCTYZbiKZtNtFluEqAFVDCByc0pD",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3333/employee/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3333",
+							"path": [
+								"employee",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "set-cookie",
+							"value": "adonis-session=s%3AeyJtZXNzYWdlIjoiY2xpbGZndXdrMDAwMWIzcWg1ZHYwZ3c1ZSIsInB1cnBvc2UiOiJhZG9uaXMtc2Vzc2lvbiJ9.0whctkNb-fQP1RQvtROLL_rzKwTTsvuY7v8fN0Z8UaQ; Max-Age=7200; Path=/; HttpOnly"
+						},
+						{
+							"key": "set-cookie",
+							"value": "clilfguwk0001b3qh5dv0gw5e=e%3AT8_k0U_oeYJlelyKIO3tecqqiWYP59GRzOz8lfzxtX4mNbZCEW8KzyCIHT1e7JA2FpyOTcbSOggXMeZWy4Qf9iFIsEijoexKfs2y0TorQiE.RUJoTjBSc0I1X0NIdUVjXw.7PVLEzStmVnO_gFH1NvB1lKg4tSmSEW9HxiHVs_8iAQ; Max-Age=7200; Path=/; HttpOnly"
+						},
+						{
+							"key": "content-length",
+							"value": "4351"
+						},
+						{
+							"key": "content-type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 07 Jun 2023 08:09:20 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n        <meta name=\"csrf-token\" content=\"undefined\">\n        <title>HR - Management</title>\n        <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap\">\n        <link href=\"https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css\" rel=\"stylesheet\">\n        <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\n\n\n    </head>\n    <body class=\"font-sans antialiased\">\n        <div class=\"min-h-screen bg-gray-100\">\n            <header class=\"bg-white shadow mb-4\">\n                <div class=\"max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8\">\n                    <nav class=\"navbar navbar-expand-lg \">\n                        <div class=\"container-fluid\">\n                            <a class=\"navbar-brand\" href=\"/\">HR - Management</a>\n                            <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\"\n                            data-bs-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\"\n                            aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n                                <span class=\"navbar-toggler-icon\"></span>\n                            </button>\n                            <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n                                <ul class=\"navbar-nav me-auto mb-2 mb-lg-0\">\n                                    <li class=\"nav-item\">\n                                        <a class=\"nav-link active\" aria-current=\"page\" href=\"/dashboard\">Home</a>\n                                    </li>\n                                </ul>\n                            </div>\n                        </div>\n                    </nav>\n                </div>\n            </header>\n            <div class=\"max-w-7xl mx-auto sm:px-6 \">\n                <h2 class=\"font-semibold text-xl text-gray-800 leading-tight\">\n                Employee\n            </h2>\n            </div>\n            <main>\n                <div class=\"pb-6\">\n                    <div class=\"max-w-7xl mx-auto sm:px-6 lg:px-8\">\n                        <div class=\"bg-white overflow-hidden shadow-sm sm:rounded-lg\">\n                            <div class=\"p-6 bg-white border-b border-gray-200\">\n                                <div>\n                                    <form action=\"/employee/1?_method=PUT\"\n                        method=\"put\">\n                                        <div class=\"flex flex-row\">\n                                            <label>User ID</label>\n                                            <input type=\"text\" name=\"user_id\"\n                                value=\"1\"\n                                class=\"ml-16 border-b-1 px-2\" />\n                                        </div>\n                                        <div class=\"flex flex-row\">\n                                            <label>First Name</label>\n                                            <input type=\"text\" name=\"first_name\" value=\"Jhon\"\n                                class=\"ml-10 border-b-1 px-2\" />\n                                        </div>\n                                        <div class=\"flex flex-row\">\n                                            <label>Last Name</label>\n                                            <input type=\"text\" name=\"last_name\" value=\"Doe\"\n                                class=\"ml-10 border-b-1 px-2\" />\n                                        </div>\n                                        <div class=\"flex flex-row\">\n                                            <label>Gender</label>\n                                            <input type=\"text\" name=\"gender\" value=\"Male\"\n                                class=\"ml-16 border-b-1 px-2\" />\n                                        </div>\n                                        <div class=\"flex flex-row\">\n                                            <label>Division</label>\n                                            <input type=\"text\" name=\"division\" value=\"Tech\"\n                                class=\"ml-16 border-b-1 px-2\" />\n                                        </div>\n                                        <div class=\"flex flex-row\">\n                                            <label>Level</label>\n                                            <input type=\"text\" name=\"level\" value=\"Staff\"\n                                class=\"ml-20 border-b-1 px-2\" />\n                                        </div>\n                                        <div>\n                                            <button type=\"submit\" class=\"border-1 my-4 px-10 py-2\">Save</button>\n                                        </div>\n                                    </form>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </main>\n        </div>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "Delete Employee Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer Mg.0zMCwjzjBfue4bUornjE7FbAJY0owrPdxCTYZbiKZtNtFluEqAFVDCByc0pD",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3333/employee/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3333",
+					"path": [
+						"employee",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete Employee Copy",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer Mg.0zMCwjzjBfue4bUornjE7FbAJY0owrPdxCTYZbiKZtNtFluEqAFVDCByc0pD",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3333/employee/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3333",
+							"path": [
+								"employee",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "set-cookie",
+							"value": "adonis-session=s%3AeyJtZXNzYWdlIjoiY2xpbGZndXdrMDAwMWIzcWg1ZHYwZ3c1ZSIsInB1cnBvc2UiOiJhZG9uaXMtc2Vzc2lvbiJ9.0whctkNb-fQP1RQvtROLL_rzKwTTsvuY7v8fN0Z8UaQ; Max-Age=7200; Path=/; HttpOnly"
+						},
+						{
+							"key": "set-cookie",
+							"value": "clilfguwk0001b3qh5dv0gw5e=e%3AAeGGLSCya6Eq1YN-lI--PcpXPQNF18g7i46Fc7yDq8Y9GcKPLiGiYFwtpROgsaAQrEpFFXUNxvceR2w8BGH-2z1arpCGe3j0tpjpaa5mqN8.emNLVGNuVkExeFZfVzlWQg.z7wNiBWR_V_TEd7NbpM4B-JT5_RZZ-E_lZODvxgZDoA; Max-Age=7200; Path=/; HttpOnly"
+						},
+						{
+							"key": "content-length",
+							"value": "20824"
+						},
+						{
+							"key": "content-type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 07 Jun 2023 08:09:36 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n        <meta name=\"csrf-token\" content=\"undefined\">\n        <title>HR - Management</title>\n        <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap\">\n        <link href=\"https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css\" rel=\"stylesheet\">\n        <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\n\n\n    </head>\n    <body class=\"font-sans antialiased\">\n        <div class=\"min-h-screen bg-gray-100\">\n            <header class=\"bg-white shadow mb-4\">\n                <div class=\"max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8\">\n                    <nav class=\"navbar navbar-expand-lg \">\n                        <div class=\"container-fluid\">\n                            <a class=\"navbar-brand\" href=\"/\">HR - Management</a>\n                            <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\"\n                            data-bs-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\"\n                            aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n                                <span class=\"navbar-toggler-icon\"></span>\n                            </button>\n                            <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n                                <ul class=\"navbar-nav me-auto mb-2 mb-lg-0\">\n                                    <li class=\"nav-item\">\n                                        <a class=\"nav-link active\" aria-current=\"page\" href=\"/dashboard\">Home</a>\n                                    </li>\n                                </ul>\n                            </div>\n                        </div>\n                    </nav>\n                </div>\n            </header>\n            <div class=\"max-w-7xl mx-auto sm:px-6 \">\n                <h2 class=\"font-semibold text-xl text-gray-800 leading-tight\">\n                Employee\n            </h2>\n            </div>\n            <main>\n                <div class=\"py-4\">\n                    <div class=\"max-w-7xl mx-auto sm:px-6 lg:px-8\">\n                        <div class=\"bg-white overflow-hidden shadow-sm sm:rounded-lg\">\n                            <div class=\"p-6 bg-white border-b border-gray-200\">\n                                <a href=\"/employee/create\" class=\"btn btn-primary\">Add new Employee</a>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"pb-6\">\n                    <div class=\"max-w-7xl mx-auto sm:px-6 lg:px-8\">\n                        <div class=\"bg-white overflow-hidden shadow-sm sm:rounded-lg\">\n                            <div class=\"p-6 bg-white border-b border-gray-200\">\n                                <div class=\"panel-bod\">\n                                    <table class=\"table\">\n                                        <thead>\n                                            <th>ID</th>\n                                            <th>User_ID</th>\n                                            <th>First Name</th>\n                                            <th>Last Name</th>\n                                            <th>Gender</th>\n                                            <th>Division</th>\n                                            <th>Level</th>\n                                            <th>Action</th>\n                                        </thead>\n                                        <tbody class=\"max-w-full\">\n                                            <tr class=\"max-w-full\">\n                                                <td>\n                                                    <p class=\"sm:font-bold\">1</p>\n                                                </td>\n                                                <td>\n                                                    <p>1</p>\n                                                </td>\n                                                <td>\n                                    Jhon\n                                </td>\n                                                <td>Doe</td>\n                                                <td>Male</td>\n                                                <td>Tech</td>\n                                                <td>Staff</td>\n                                                <td>\n                                                    <div class=\"flex flex-row\">\n                                                        <a href=\" /employee/1\"\n                                            class=\"bg-yellow-500 btn btn-primary mr-4\">Edit</a>\n                                                        <form method=\"POST\"\n                                            action=\"/employee/1?_method=DELETE\"\n                                            method=\"delete\">\n                                                            <button class=\"bg-red-500  btn btn-danger\">Delete</button>\n                                                        </form>\n                                                    </div>\n                                                </td>\n                                            </tr>\n                                            <tr class=\"max-w-full\">\n                                                <td>\n                                                    <p class=\"sm:font-bold\">2</p>\n                                                </td>\n                                                <td>\n                                                    <p>2</p>\n                                                </td>\n                                                <td>\n                                    Isach\n                                </td>\n                                                <td>Newton</td>\n                                                <td>Male</td>\n                                                <td>Finance</td>\n                                                <td>Staff</td>\n                                                <td>\n                                                    <div class=\"flex flex-row\">\n                                                        <a href=\" /employee/2\"\n                                            class=\"bg-yellow-500 btn btn-primary mr-4\">Edit</a>\n                                                        <form method=\"POST\"\n                                            action=\"/employee/2?_method=DELETE\"\n                                            method=\"delete\">\n                                                            <button class=\"bg-red-500  btn btn-danger\">Delete</button>\n                                                        </form>\n                                                    </div>\n                                                </td>\n                                            </tr>\n                                            <tr class=\"max-w-full\">\n                                                <td>\n                                                    <p class=\"sm:font-bold\">3</p>\n                                                </td>\n                                                <td>\n                                                    <p>3</p>\n                                                </td>\n                                                <td>\n                                    Agus\n                                </td>\n                                                <td>Doang</td>\n                                                <td>Male</td>\n                                                <td>Tech</td>\n                                                <td>Lead</td>\n                                                <td>\n                                                    <div class=\"flex flex-row\">\n                                                        <a href=\" /employee/3\"\n                                            class=\"bg-yellow-500 btn btn-primary mr-4\">Edit</a>\n                                                        <form method=\"POST\"\n                                            action=\"/employee/3?_method=DELETE\"\n                                            method=\"delete\">\n                                                            <button class=\"bg-red-500  btn btn-danger\">Delete</button>\n                                                        </form>\n                                                    </div>\n                                                </td>\n                                            </tr>\n                                            <tr class=\"max-w-full\">\n                                                <td>\n                                                    <p class=\"sm:font-bold\">4</p>\n                                                </td>\n                                                <td>\n                                                    <p>4</p>\n                                                </td>\n                                                <td>\n                                    Bambang\n                                </td>\n                                                <td>Pamungkas</td>\n                                                <td>Male</td>\n                                                <td>Marketing</td>\n                                                <td>Manager</td>\n                                                <td>\n                                                    <div class=\"flex flex-row\">\n                                                        <a href=\" /employee/4\"\n                                            class=\"bg-yellow-500 btn btn-primary mr-4\">Edit</a>\n                                                        <form method=\"POST\"\n                                            action=\"/employee/4?_method=DELETE\"\n                                            method=\"delete\">\n                                                            <button class=\"bg-red-500  btn btn-danger\">Delete</button>\n                                                        </form>\n                                                    </div>\n                                                </td>\n                                            </tr>\n                                            <tr class=\"max-w-full\">\n                                                <td>\n                                                    <p class=\"sm:font-bold\">5</p>\n                                                </td>\n                                                <td>\n                                                    <p>5</p>\n                                                </td>\n                                                <td>\n                                    Tejo\n                                </td>\n                                                <td>Sutejo</td>\n                                                <td>Male</td>\n                                                <td>HR</td>\n                                                <td>Staff</td>\n                                                <td>\n                                                    <div class=\"flex flex-row\">\n                                                        <a href=\" /employee/5\"\n                                            class=\"bg-yellow-500 btn btn-primary mr-4\">Edit</a>\n                                                        <form method=\"POST\"\n                                            action=\"/employee/5?_method=DELETE\"\n                                            method=\"delete\">\n                                                            <button class=\"bg-red-500  btn btn-danger\">Delete</button>\n                                                        </form>\n                                                    </div>\n                                                </td>\n                                            </tr>\n                                            <tr class=\"max-w-full\">\n                                                <td>\n                                                    <p class=\"sm:font-bold\">6</p>\n                                                </td>\n                                                <td>\n                                                    <p>6</p>\n                                                </td>\n                                                <td>\n                                    Sukardi\n                                </td>\n                                                <td>Jaya</td>\n                                                <td>Male</td>\n                                                <td>Operation</td>\n                                                <td>Lead</td>\n                                                <td>\n                                                    <div class=\"flex flex-row\">\n                                                        <a href=\" /employee/6\"\n                                            class=\"bg-yellow-500 btn btn-primary mr-4\">Edit</a>\n                                                        <form method=\"POST\"\n                                            action=\"/employee/6?_method=DELETE\"\n                                            method=\"delete\">\n                                                            <button class=\"bg-red-500  btn btn-danger\">Delete</button>\n                                                        </form>\n                                                    </div>\n                                                </td>\n                                            </tr>\n                                            <tr class=\"max-w-full\">\n                                                <td>\n                                                    <p class=\"sm:font-bold\">7</p>\n                                                </td>\n                                                <td>\n                                                    <p>7</p>\n                                                </td>\n                                                <td>\n                                    Samsul\n                                </td>\n                                                <td>Merdeka</td>\n                                                <td>Male</td>\n                                                <td>Sales</td>\n                                                <td>Lead</td>\n                                                <td>\n                                                    <div class=\"flex flex-row\">\n                                                        <a href=\" /employee/7\"\n                                            class=\"bg-yellow-500 btn btn-primary mr-4\">Edit</a>\n                                                        <form method=\"POST\"\n                                            action=\"/employee/7?_method=DELETE\"\n                                            method=\"delete\">\n                                                            <button class=\"bg-red-500  btn btn-danger\">Delete</button>\n                                                        </form>\n                                                    </div>\n                                                </td>\n                                            </tr>\n                                            <tr class=\"max-w-full\">\n                                                <td>\n                                                    <p class=\"sm:font-bold\">8</p>\n                                                </td>\n                                                <td>\n                                                    <p>8</p>\n                                                </td>\n                                                <td>\n                                    Bahri\n                                </td>\n                                                <td>Bersama</td>\n                                                <td>Male</td>\n                                                <td>Finance</td>\n                                                <td>Manager</td>\n                                                <td>\n                                                    <div class=\"flex flex-row\">\n                                                        <a href=\" /employee/8\"\n                                            class=\"bg-yellow-500 btn btn-primary mr-4\">Edit</a>\n                                                        <form method=\"POST\"\n                                            action=\"/employee/8?_method=DELETE\"\n                                            method=\"delete\">\n                                                            <button class=\"bg-red-500  btn btn-danger\">Delete</button>\n                                                        </form>\n                                                    </div>\n                                                </td>\n                                            </tr>\n                                            <tr class=\"max-w-full\">\n                                                <td>\n                                                    <p class=\"sm:font-bold\">9</p>\n                                                </td>\n                                                <td>\n                                                    <p>9</p>\n                                                </td>\n                                                <td>\n                                    Onta\n                                </td>\n                                                <td>Arab</td>\n                                                <td>Female</td>\n                                                <td>Tech</td>\n                                                <td>Staff</td>\n                                                <td>\n                                                    <div class=\"flex flex-row\">\n                                                        <a href=\" /employee/9\"\n                                            class=\"bg-yellow-500 btn btn-primary mr-4\">Edit</a>\n                                                        <form method=\"POST\"\n                                            action=\"/employee/9?_method=DELETE\"\n                                            method=\"delete\">\n                                                            <button class=\"bg-red-500  btn btn-danger\">Delete</button>\n                                                        </form>\n                                                    </div>\n                                                </td>\n                                            </tr>\n                                            <tr class=\"max-w-full\">\n                                                <td>\n                                                    <p class=\"sm:font-bold\">10</p>\n                                                </td>\n                                                <td>\n                                                    <p>10</p>\n                                                </td>\n                                                <td>\n                                    Test\n                                </td>\n                                                <td>Doang</td>\n                                                <td>Male</td>\n                                                <td>Finance</td>\n                                                <td>Staff</td>\n                                                <td>\n                                                    <div class=\"flex flex-row\">\n                                                        <a href=\" /employee/10\"\n                                            class=\"bg-yellow-500 btn btn-primary mr-4\">Edit</a>\n                                                        <form method=\"POST\"\n                                            action=\"/employee/10?_method=DELETE\"\n                                            method=\"delete\">\n                                                            <button class=\"bg-red-500  btn btn-danger\">Delete</button>\n                                                        </form>\n                                                    </div>\n                                                </td>\n                                            </tr>\n                                            <tr class=\"max-w-full\">\n                                                <td>\n                                                    <p class=\"sm:font-bold\">1</p>\n                                                </td>\n                                                <td>\n                                                    <p>1</p>\n                                                </td>\n                                                <td>\n                                    Jhon\n                                </td>\n                                                <td>Doe</td>\n                                                <td>Male</td>\n                                                <td>Tech</td>\n                                                <td>Manager</td>\n                                                <td>\n                                                    <div class=\"flex flex-row\">\n                                                        <a href=\" /employee/11\"\n                                            class=\"bg-yellow-500 btn btn-primary mr-4\">Edit</a>\n                                                        <form method=\"POST\"\n                                            action=\"/employee/11?_method=DELETE\"\n                                            method=\"delete\">\n                                                            <button class=\"bg-red-500  btn btn-danger\">Delete</button>\n                                                        </form>\n                                                    </div>\n                                                </td>\n                                            </tr>\n                                            <tr class=\"max-w-full\">\n                                                <td>\n                                                    <p class=\"sm:font-bold\">1</p>\n                                                </td>\n                                                <td>\n                                                    <p>1</p>\n                                                </td>\n                                                <td>\n                                    Jhon\n                                </td>\n                                                <td>Doe</td>\n                                                <td>Male</td>\n                                                <td>Tech</td>\n                                                <td>Manager</td>\n                                                <td>\n                                                    <div class=\"flex flex-row\">\n                                                        <a href=\" /employee/12\"\n                                            class=\"bg-yellow-500 btn btn-primary mr-4\">Edit</a>\n                                                        <form method=\"POST\"\n                                            action=\"/employee/12?_method=DELETE\"\n                                            method=\"delete\">\n                                                            <button class=\"bg-red-500  btn btn-danger\">Delete</button>\n                                                        </form>\n                                                    </div>\n                                                </td>\n                                            </tr>\n                                            <tr class=\"max-w-full\">\n                                                <td>\n                                                    <p class=\"sm:font-bold\">1</p>\n                                                </td>\n                                                <td>\n                                                    <p>1</p>\n                                                </td>\n                                                <td>\n                                    Jhon\n                                </td>\n                                                <td>Doe</td>\n                                                <td>Male</td>\n                                                <td>Tech</td>\n                                                <td>Manager</td>\n                                                <td>\n                                                    <div class=\"flex flex-row\">\n                                                        <a href=\" /employee/13\"\n                                            class=\"bg-yellow-500 btn btn-primary mr-4\">Edit</a>\n                                                        <form method=\"POST\"\n                                            action=\"/employee/13?_method=DELETE\"\n                                            method=\"delete\">\n                                                            <button class=\"bg-red-500  btn btn-danger\">Delete</button>\n                                                        </form>\n                                                    </div>\n                                                </td>\n                                            </tr>\n                                        </tbody>\n                                    </table>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </main>\n        </div>\n    </body>\n</html>"
+				}
+			]
+		}
+	]
+}
